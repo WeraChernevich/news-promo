@@ -1,0 +1,32 @@
+.search__form {
+    font-size: 1rem;
+    line-height: 1em;
+    background-color: var(--white);
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-radius: 500px;
+}
+
+.search__input {
+    flex: 1;
+    margin: 10px;
+    padding: 10px 10px 10px 40px;
+    border-radius: 22.4px;
+    background-color: var(--bg-color);
+    background-image: url("./../../img/search.png");
+    background-repeat: no-repeat;
+    background-position: 10px center;
+
+    &::placeholder {
+        color: var(--text-color);
+    }
+
+    @include mobile {
+        padding: 5px 5px 5px 30px;
+
+        
+
+    }
+}
+

@@ -1,0 +1,38 @@
+.news__item {
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    border-radius: 25px;
+    background: var(--news-bg-color);
+    justify-items: end;
+
+    & img {
+        border-radius: 25px;
+        width: 200px;
+        height: 200px;
+
+        @include mobile {
+            background-image: url('./../../img/news.jpg');
+            width: 100%;
+        }
+
+        & picture {
+            @include mobile {
+                display: none;
+            }
+        }
+    }
+
+    @include mobile {
+        display: flex;
+        flex-direction: column-reverse;
+
+    }
+}
+
+.news-item__link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}

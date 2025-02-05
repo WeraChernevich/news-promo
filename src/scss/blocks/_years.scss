@@ -1,0 +1,24 @@
+/* Блок years */
+.years__button {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--btn-color);
+  cursor: pointer;
+  margin-right: 5px;
+
+  &.years__button--active {
+    background-color: var(--btn-active-color);
+  }
+
+  &:hover {
+    background-color: var(--btn-active-color);
+  }
+}
+
+.years__button--archive {
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  width: 176px;
+  height: 44px;
+}

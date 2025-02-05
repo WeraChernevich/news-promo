@@ -1,0 +1,16 @@
+/* Блок categories */
+.categories__button {
+  border-radius: 5px;
+  padding: 10px;
+  background-color: var(--btn-color);
+  cursor: pointer;
+  margin-left: 10px;
+
+  &.categories__button--active {
+    background-color: var(--btn-active-color);
+  }
+
+  &:hover {
+    background-color: var(--btn-active-color);
+  }
+}

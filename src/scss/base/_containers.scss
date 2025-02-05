@@ -1,0 +1,17 @@
+/* Контейнеры */
+.container {
+	margin: 0 auto;
+	padding: 40px 70px;
+	max-width: 1200px;
+	width: 100%;
+
+	@include tablet {
+		padding: 30px 50px;
+
+	}
+
+	@include mobile {
+		padding: 30px 15px;
+	}
+
+}
