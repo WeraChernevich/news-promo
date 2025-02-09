@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Новостной сайт</title>
+	<link rel="stylesheet" href="./css/main.css" />
+</head>
+
+<body>
+	@@include('blocks/header.html')
+	<main class="content">
+		<section class="container">
+			<header class="section__breadcrumbs breadcrumbs">
+				<a href="#" class="breadcrumbs__item">Главная</a>
+				<span class="breadcrumbs__separator">&raquo;</span>
+				<a href="#" class="breadcrumbs__item breadcrumbs__item--active" id="work">Обращения граждан</a>
+			</header>
+			<div class="section__body">
+				<div class="feedback">
+					<form class="feedback__form">
+						<div class="feedback__body">
+							<div class="feedback__field field">
+								<input class="field__input" id="name" name="name" placeholder="ФИО" required>
+							</div>
+							<div class="feedback__field field">
+								<input class="field__input" id="email" name="email" placeholder="E-mail" type="email"
+									required>
+							</div>
+							<div class="feedback__field field">
+								<input class="field__input" id="tel" name="tal" placeholder="+7 (952) - 664 - 77 - 23">
+							</div>
+							<div class="feedback__field field">
+								<textarea class="field__input field__input--textarea" id="message" name="message"
+									placeholder="Введите текст вашего обращения" required>
+								</textarea>
+							</div>
+						</div>
+						<div class="feedback__file-upload file-upload">
+							<form id="file-upload__form" action="#" method="post" enctype="multipart/form-data">
+								<div class="file-upload__wrapper">
+									<label for="file-upload__input" class="file-upload-button">
+										<span class="visually-hidden">Прикрепить файлы</span>
+									</label>
+									<input id="file-upload__input" type="file" name="uploaded_file">
+								</div>
+						
+								<label class="checkbox">
+									<input class="checkbox__input" type="checkbox" name="terms_agreement" required>
+									<span class="checkbox__text">Оставляя заявку, вы соглашаетесь с условиями  <a href="#!" target="_blank">политики конфиденциальности</a></span>
+								</label>
+						
+								<button class="file-upload__btn button" type="submit" id="submit-button" disabled>Отправить</button>
+							</form>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</main>
+	@@include('blocks/mobile-overlay.html')
+	@@include('blocks/footer.html')
+	<script src="./js/index.bundle.js"></script>
+</body>
+
+</html>

@@ -1,24 +1,4 @@
 .logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    background-color: var(--white);
-}
-
-.logo-footer {
-    background-color: var(--white);
-    border-radius: 676px;
-    padding: 33px 33px 33px 21px;
-    width: 170px;
-    height: 167px;
-
-    @include tablet {
-        width: 73px;
-        height: 73px;
-    }
-
-    @include mobile {
-        width: 87px;
-        height: 87px;
-    }
+    stroke: var(--color-light);
+    color: var(--color-light);
 }

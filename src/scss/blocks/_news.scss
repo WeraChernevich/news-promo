@@ -1,84 +1,56 @@
 /* Блок news */
 .news {
-    background: var(--page-color);
-    border-radius: 50px 50px 0 0;
+    display: flex;
+    flex-direction: column;
 
-}
+    &__title {
+        font-size: 48px;
 
-.news>.container {
-    
-    @include tablet {
+        @include tablet {
+            order: 1;
+        }
+    }
+
+    &__header {
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 50px;
+
+        @include tablet {
+            display: inline-block; 
+            opacity: 1;
+            margin-bottom: 0;
+            order: 0;
+        }
+    }
+
+    &__categories {
+        margin-bottom: 5px;
+        display: flex;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 1em;
+
+        gap: 5px;
+    }
+
+    &__years {
+        display: flex;
+        gap: 5px;
+    }
+
+    &__item {
+        background-color: var(--color-light);
+        border-radius: var(--border-radius-m);
+
+        max-width: 540px;
+    }
+
+    &__pagination {
+        text-align: center;
+        margin-top: 20px;
+        padding-bottom: 80px;
+        font-family: var(--font-family-main);
     }
 }
-
-.news__breadcrumbs {
-    margin-bottom: 100px;
-
-    @include tablet {
-        order: 1;
-    }
-}
-
-.news__title {
-    margin-bottom: 80px;
-
-    @include tablet {
-        order: 3;
-    }
-}
-
-.news__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 50px;
-
-    @include tablet {
-        margin-bottom: 30px;
-        order: 2;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
-  
-
-    }
-}
-
-.news__years {
-    display: flex;
-    gap: 5px;
-}
-
-.news__categories {
-    display: flex;
-    font-weight: 400;
-    font-size: 1.25rem;
-    line-height: 1em;
-
-    gap: 5px;
-}
-
-.news__list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(493px, 1fr));
-    gap: 20px;
-
-    @include tablet {
-        order: 4;
-    }
-}
-
-.news__pagination {
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    font-family: var(--font-main);
-
-    @include tablet {
-        order: 5;
-    }
-}
-
-

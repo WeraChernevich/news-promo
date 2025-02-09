@@ -1,0 +1,25 @@
+.soc1als {
+    margin-left: 40px;
+    margin-bottom: 60px;
+
+    @include tablet {
+        margin: 0;
+    }
+    &__list {
+        display: flex;
+        column-gap: 10px;
+    }
+
+    &__link {
+        @include flex-center(true);
+        @include square(48px);
+
+        color: var(--color-light);
+        background-color: var(--color-light);
+
+        & svg {
+            fill: var(--color-light);
+            stroke: var(--color-light);
+        } 
+    }
+}

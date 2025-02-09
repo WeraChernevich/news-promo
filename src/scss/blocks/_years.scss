@@ -1,24 +1,53 @@
 /* Блок years */
-.years__button {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: var(--btn-color);
-  cursor: pointer;
-  margin-right: 5px;
+.years {
+    height: 44px;
+    font-size: 20px; 
 
-  &.years__button--active {
-    background-color: var(--btn-active-color);
-  }
+    @include mobile {
+        display: flex;
+        flex-direction: column;
+    }
 
-  &:hover {
-    background-color: var(--btn-active-color);
-  }
-}
+    &__static {
+        display: flex;
+    }
 
-.years__button--archive {
-  border: 2px solid #000;
-  border-radius: 20px;
-  padding: 10px;
-  width: 176px;
-  height: 44px;
+    @include mobile {
+        display: flex;
+
+    }
+
+    &__button {
+        border-radius: 5px;
+        padding: 10px;
+        background-color: var(--color-light);
+        cursor: pointer;
+        border: none;
+        margin-right: 5px;
+        font-size: 20px;
+
+        @include tablet {
+            padding: 5px;
+        }
+
+        &:hover {
+            background-color: var(--color-accent);
+        }
+
+        &--active {
+            background-color: var(--color-accent);
+        }
+
+        &--archive {
+            border: 2px solid #000;
+            border-radius: 20px;
+            padding: 10px;
+            width: 176px;
+            height: 44px;
+
+            &:hover {
+                background-color: var(--color-accent);
+            }
+        }
+    }
 }

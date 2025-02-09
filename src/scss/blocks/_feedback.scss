@@ -1,0 +1,35 @@
+.feedback {
+    --feedbackMarginTop: 100px;
+
+    margin-top: var(--feedbackMarginTop);
+    padding: 20px;
+    background-color: var(--color-light);
+    border-radius: 10px;
+    font-size: 18px;
+
+    @include tablet {
+        --feedbackMarginTop: 0;
+    }
+
+    @include mobile {
+        --feedbackMarginTop: 30px;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+
+    }
+
+    &__field {
+        width: 100%;
+        
+    }
+}

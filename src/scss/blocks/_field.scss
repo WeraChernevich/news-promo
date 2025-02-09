@@ -1,0 +1,18 @@
+.field {
+--fieldPadding: 30px;
+
+    &__input {
+        padding: var(--fieldPadding);
+        width: 100%;
+        max-width: none;
+        display: block;
+        box-sizing: border-box;
+        background-color: var(--color-body);
+        border-radius: var(--border-radius-form);
+        border: none !important;
+
+        @include mobile {
+            --fieldPadding: 20px;
+        }
+    }
+}

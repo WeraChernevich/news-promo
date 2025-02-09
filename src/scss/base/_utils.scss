@@ -1,40 +1,40 @@
-.none {
-	display: none !important;
+.container {
+    max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+    margin-inline: auto;
+}
+
+.content {
+    background: var(--color-body);
+    border-radius: 50px 50px 0 0;
 }
 
 .visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	margin: -1px;
-	border: 0;
-	padding: 0;
-	white-space: nowrap;
-	clip-path: inset(100%);
-	clip: rect(0 0 0 0);
-	overflow: hidden;
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
 }
 
-.no-scroll {
-	overflow-y: hidden;
+.hidden-tablet {
+    @include tablet {
+        display: none !important;
+    }
 }
 
-.text-left {
-	text-align: left;
+.hidden-mobile {
+    @include mobile {
+        display: none !important;
+    }
 }
 
-.text-right {
-	text-align: right;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.d-flex {
-	display: flex;
-}
-
-.flex-center {
-	justify-content: center;
+.visible-mobile {
+    @include mobile-above {
+        display: none !important;
+    }
 }

@@ -1,0 +1,8 @@
+.lazy-load {
+    min-height: 200px;
+    background-color: #f0f0f0;
+}
+
+.lazy-load.loaded {
+    background: none;
+}

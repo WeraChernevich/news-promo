@@ -1,50 +1,68 @@
 .header {
-	margin: 0 auto;
-	font-weight: 400;
-	font-size: 1.5rem;
-	line-height: 1em;
-	width: 100%;
+    margin: 20px auto;
+    background-color: var(--color-accent);
+    padding: 10px;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: var(--border-radius-l);
 
-	&__row {
-		padding: 2px;
-		background-color: var(--menu-bg-color);
-		border-radius: 52px;
-		display: grid;
-		grid-template-columns: 70px auto 70px 70px;
-		justify-items: center;
-		align-items: center;
+    @include mobile {
+        border-radius: var(--border-radius-m);
+    }
 
-		@include tablet {
-			padding: 10px;
-			display: flex;
-			justify-content: space-between;
-			border-radius: 25px 25px 0 0;
+    @include mobile-s {
+        max-width: 350px;
+    }
 
-		}
-	}
-
-	& img {
-		@include tablet {
-			display: none;
-		}
-	}
-}
-
-.header__nav {
-	@include tablet {
-		display: none;
-	}
-}
-
-.header__search {
-    display: none;
-    @include tablet {
-		padding: 10px;
-		display: flex;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
         align-items: center;
-        border-radius: 0 0 25px 25px;
-        width: 100%;
-		background-color: var(--menu-bg-color);
+        column-gap: 30px;
+    }
 
+    &__menu {
+        margin-left: auto;
+
+        &-list {
+            display: flex;
+            align-items: center;
+            column-gap: 30px;
+
+            @include tablet {
+                column-gap: 20px;
+            }
+        }
+
+        &-link {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            height: 30px;
+
+            @include hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                translate: -50%;
+                width: 0;
+                height: 2px;
+                background-color: currentColor;
+                transition-duration: inherit;
+            }
+        }
+    }
+
+    &__search {
+        margin-top: 5px;
+        width: 100%;
+        background-color: var(--color-light);
     }
 }

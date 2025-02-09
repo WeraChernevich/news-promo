@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Actor:regular);
+@import url(https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+body {
+    font-family: var(--font-family-main);
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.28;
+    color: var(--color-dark);
+    background-color: var(--color-page);
+}
+
+a,
+button,
+input,
+textarea, 
+svg {
+    transition-duration: var(--transition-duration);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
