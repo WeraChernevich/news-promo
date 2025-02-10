@@ -1,0 +1,21 @@
+.cards {
+    --cardsPaddingTop: 80px;
+    --cardPaddongBottom: 100px;
+    padding-top: var(--cardsPaddingTop);
+    padding-bottom: var(--cardPaddongBottom);
+
+    @include tablet {
+        --cardsPaddingTop: 40px;
+        --cardPaddongBottom: 60px;
+    }
+
+    @include mobile {
+        --cardsPaddingTop: 30px;
+        --cardPaddongBottom: 40px;
+    }
+
+    &--wrapper {
+        position: relative;
+        display: inline-block;
+    }
+}

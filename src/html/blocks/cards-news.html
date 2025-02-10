@@ -1,0 +1,14 @@
+<section class="container">
+    <header class="section__breadcrumbs breadcrumbs">
+        <a href="#" class="breadcrumbs__item">Главная</a>
+        <span class="breadcrumbs__separator">&raquo;</span>
+        <a href="#" class="breadcrumbs__item breadcrumbs__item--active">Карточки</a>
+    </header>
+    <div class="section__body">
+        <div class="cards">
+            <ul class="cards__list grid grid--2">
+                @@loop('card.html', '/data/cards.json')
+            </ul>
+        </div>
+    </div>
+</section>

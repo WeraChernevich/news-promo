@@ -11,6 +11,10 @@
         border-radius: var(--border-radius-form);
         border: none !important;
 
+        &--textarea {
+            resize: vertical;
+        }
+
         @include mobile {
             --fieldPadding: 20px;
         }

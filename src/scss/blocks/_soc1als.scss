@@ -17,9 +17,9 @@
         color: var(--color-light);
         background-color: var(--color-light);
 
-        & svg {
-            fill: var(--color-light);
-            stroke: var(--color-light);
+        svg {
+            color: var(--color-light);
+            background-color: var(--color-light);;
         } 
     }
 }

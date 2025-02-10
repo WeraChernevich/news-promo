@@ -1,0 +1,10 @@
+.extra {
+    @include tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Две колонки */
+        grid-template-rows: auto auto; /* Две строки */
+        gap: 10px;
+    }
+
+    
+}

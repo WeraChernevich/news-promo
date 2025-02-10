@@ -1,6 +1,15 @@
 .container {
     max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
     margin-inline: auto;
+
+    &--feedback {
+        --feedbackPaddingBottom: 150px;
+        padding-bottom: var(--feedbackPaddingBottom);
+
+        @include tablet {
+            --feedbackPaddingBottom: 80px;
+        }
+    }
 }
 
 .content {
